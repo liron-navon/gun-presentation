@@ -1,0 +1,23 @@
+{
+  "name": "gun-examples",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "relay": "node backend/relay/index.js",
+    "example": "node frontend/example/index.js",
+    "editor": "rm -rf dist && parcel frontend/editor/index.html --port 8555",
+    "auth": "rm -rf dist && parcel frontend/auth/index.html --port 8666"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "gun": "^0.2020.1235",
+    "quill": "^1.3.7",
+    "uuid": "^8.3.2"
+  },
+  "devDependencies": {
+    "parcel": "^2.0.0"
+  }
+}

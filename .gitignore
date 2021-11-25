@@ -1,0 +1,5 @@
+.parcel-cache
+.vscode
+node_modules
+radata
+dist
