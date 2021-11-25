@@ -12,12 +12,12 @@ if (!uuid) {
     uuid = uuidv4();
     const searchParams = new URLSearchParams(window.location.search);
     searchParams.set('uuid', uuid);
-    window.location.search = searchParams.toString();
 
     gun.get(uuid).put({
         delta: JSON.stringify(quill.getContents()),
         range: JSON.stringify(quill.getSelection())
     });
+    window.location.search = searchParams.toString();
 }
 
 gun.get(uuid).on((data, key) => {

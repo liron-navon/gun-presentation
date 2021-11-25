@@ -61,7 +61,6 @@ function onLoggedIn() {
 
         // get the current todos and update the node to add the new todos
         currentUser.get('todos').once((data = {}) => {
-            debugger
             const list = data.list ? JSON.parse(data.list) : [];
             currentUser.get('todos').put({ list: JSON.stringify([...list, todo]) }, ack => {
                 console.log('updated todos', ack)
